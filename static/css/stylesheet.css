@@ -1,0 +1,384 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #23242a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.headtitle {
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 45px;
+    margin-bottom: 2%;
+    margin-top: 4%;
+    padding-bottom: 0%;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    height: 5%;
+    width: 100%;
+}
+
+
+.we{
+    margin-top: 5%;
+    margin-right: 8%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 8%;
+    border-radius: 0.9em;
+    font-size:20px;
+    border: 2px solid;
+    color: white;
+    background-color:black;
+}
+
+.we:hover {
+            border-color: #132693;
+            color: #e3e5ea;
+            box-shadow: 0 0.5em 0.5em -0.4em #3373ee;
+        }
+/* 섹션 스타일 */
+
+
+.selcet_input,
+.selcet_output {
+    text-align: center;
+}
+
+/* 박스 스타일 */
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 5%;
+}
+
+.input,
+.output {
+    width: 45%; /* 각각의 너비를 조절할 수 있습니다. */
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .select,
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input,
+    .output {
+        width: 100%;
+    }
+    .trans_button{
+        width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    }
+}
+
+.trans_button{
+    transition: background 0.3s;
+    border: 2px #2a2f3b solid;
+    display: flex;
+    border-radius: 0.5em;
+    padding: 0.5em 0.7em;
+    background: #2a2f3b;
+    color: white;
+}
+
+.trans_button:hover{
+    background: #323741;
+}
+
+.copy_button{
+    transition: background 0.3s;
+    border: 2px #2a2f3b solid;
+    display: flex;
+    border-radius: 0.5em;
+    padding: 0.5em 0.7em;
+    background: #2a2f3b;
+    color: white;
+}
+
+.copy_button:hover{
+    background: #323741;
+}
+
+.print_button{
+    transition: background 0.3s;
+    border: 2px #2a2f3b solid;
+    display: flex;
+    border-radius: 0.5em;
+    padding: 0.5em 0.7em;
+    background: #2a2f3b;
+    color: white;
+}
+
+.print_button:hover{
+    background: #323741;
+}
+
+
+.dropdown{
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select-lang {
+    background: #23242a;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.select {
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #5873c4 solid;
+    box-shadow: 0 0 0.8em #2e4379;
+}
+
+.select:hover {
+    background: #323741;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #2a2d35;
+}
+
+.active {
+    background: #23242a;
+}
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
+
+.read{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    width : 75%;
+    height: 50%;
+    background-color: #23242a;
+    border-radius: 0.5em;
+
+}
+
+.motive{
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    width : 45%;
+    height: 50%;
+    background-color: #5c628f;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 1%;
+    text-align: center;
+    color: white;
+
+}
+
+.use{
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    width : 45%;
+    height: 50%;
+    background-color: #5c628f;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 1%;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.accordion {
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #5c628f;
+            outline: none;
+            transition: 0.4s;
+            background-color: #5c628f;
+            color: white;
+        }
+
+.panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+.loader{
+    position: fixed;
+    background: #333333;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader—hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+
+
+.overlay::after {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+}
+
+.popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+      z-index: 1;
+    width: 50%;
+    height: 50%;
+    border-radius: 0.9em;
+    text-align: center;
+
+    /*filter: blur(5px);*/
+    }
+
+
+
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+
+    }
+    .who{
+        text-align: left
+    }
+
+    p{
+        margin-bottom: 1%;
+    }
+    .school{
+        color: black;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+@keyframes loading {
+    from { transform: rotate(0turn) }
+    to { transform: rotate(1turn) }
+}
+
